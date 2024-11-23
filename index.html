@@ -1,133 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEN_BOT-V1-OFFCIAL-PAGE</title>
-    <style>
-        body {
-            background-image: url('https://i.ibb.co/rdzrtFc/ben.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container, .readme-content {
-            text-align: center;
-            width: 80%;
-            background-color: rgba(0, 0, 0, 0.6); /* پس‌زمینه نیمه شفاف برای خوانایی */
-            padding: 20px;
-            border-radius: 10px;
-        }
-        h1 {
-            margin-bottom: 30px;
-            font-size: 28px;
-            text-shadow: 2px 2px 5px #000;
-            background: linear-gradient(45deg, #ff7f50, #ff4500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .button {
-            display: block;
-            width: 80%;
-            max-width: 300px;
-            margin: 15px auto;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: #fff;
-            text-decoration: none;
-            background: linear-gradient(45deg, #34eb77, #1e90ff);
-            border: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-        .button:hover {
-            background: linear-gradient(45deg, #1e90ff, #34eb77);
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-        }
-        .readme-content {
-            display: none;
-            color: #333;
-            background-color: #f4f4f9;
-            overflow-y: auto;
-            height: 70vh;
-        }
-        .readme-content h1 {
-            text-align: center;
-            color: #0056b3;
-        }
-        .readme-content pre {
-            background: #e9ecef;
-            padding: 15px;
-            border-radius: 5px;
-            overflow: auto;
-            color: #333;
-        }
-        .readme-content .back-button {
-            margin-top: 20px;
-            background: linear-gradient(45deg, #ff4d4d, #ff914d);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("https://i.ibb.co/rdzrtFc/ben.jpg"); /* Set the background image */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .btn {
+      --color: #FFC0CB;
+      --color2: rgb(10, 25, 30);
+      width: 200px; /* Set a fixed width for the buttons */
+      padding: 0.8em 1.75em;
+      background-color: transparent;
+      border-radius: 6px;
+      border: .3px solid var(--color);
+      transition: .5s;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      z-index: 1;
+      font-weight: 900;
+      font-size: 17px;
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      text-transform: uppercase;
+      color: var(--color);
+      margin-bottom: 10px; /* Add margin to separate buttons */
+    }
+
+    .btn::after, .btn::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      transform: skew(90deg) translate(-50%, -50%);
+      position: absolute;
+      inset: 50%;
+      left: 25%;
+      z-index: -1;
+      transition: .5s ease-out;
+      background-color: var(--color);
+    }
+
+    .btn::before {
+      top: -50%;
+      left: -25%;
+      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::before {
+      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    }
+
+    .btn:hover::after {
+      transform: skew(45deg) translate(-50%, -50%);
+    }
+
+    .btn:hover {
+      color: var(--color2);
+    }
+
+    .btn:active {
+      filter: brightness(.7);
+      transform: scale(.98);
+    }
+  </style>
 </head>
 <body>
-    <div class="container" id="mainPage">
-        <h1>BEN_BOT-V1 - PAGE</h1>
-        <a class="button" href="https://t.me/Ronix_Tech" target="_blank">Telegram Channel</a>
-        <a class="button" href="https://youtu.be/AjjImijt_dY?si=4pCSjJYP7eiWkyyX_*" target="_blank">YouTube Tutorials</a>
-        <a class="button" href="https://github.com/TraderAn-King/BEN_BOT-V1" target="_blank">Fork Repo</a>
-        <a class="button" href="https://whatsapp.com/channel/0029Vasu3qP9RZAUkVkvSv32" target="_blank">WhatsApp Channel</a>
-        <button class="button" onclick="showReadme()">HOW TO DEPOLY ?</button>
-    </div>
 
-    <div class="readme-content" id="readmePage">
-        <h1>BEN_BOT-V1</h1>
-        <pre>
-<strong style="color: #00ffcc; font-size: 18px;">Tutorial:</strong> Hello welcome i ben bot
- owner do you want depoly bot?
- ok lets go step by step lesson me ok
+  <button onclick="window.open(`https://express-pairing-code2-1.onrender.com`)" class="btn">pair code</button>
+  <button onclick="window.open(`https://github.com/TraderAn-King/BEN_BOT-V1`)" class="btn">github</button>
+  <button onclick="window.open(`https://youtu.be/AjjImijt_dY?si=4pCSjJYP7eiWkyyX_*`)" class="btn">youtube</button>
+  <button onclick="window.open(`https://wa.me/+93744215959`)" class="btn">contact</button>
+  <button onclick="window.open(`https://whatsapp.com/channel/0029Vasu3qP9RZAUkVkvSv32`)" class="btn">whatsapp</button>
 
- <strong style="color: #00ffcc; font-size: 18px;">Step 1:</strong> First fork and star give it
- repo link 🖇️ - <a href="https://github.com/TraderAn-King/BEN_BOT-V1" target="_blank" style="color: #007bff; text-decoration: underline;">CLICK HERE</a>
- <strong style="color: #00ffcc; font-size: 18px;">Step 2:</strong> download zip file from your
- forked repo 📁
- <strong style="color: #00ffcc; font-size: 18px;">Step 3:</strong> Go to hoting site bot create
- sever 🤖 - <a href="https://bot-hosting.net/?aff=1291960268028641361" target="_blank" style="color: #007bff; text-decoration: underline;">CLICK HERE</a>
- <strong style="color: #00ffcc; font-size: 18px;">Step 4:</strong> Upload Downloaded zip file
- from your GitHub 📁
- <strong style="color: #00ffcc; font-size: 18px;">Step 5:</strong> Start server wait 10 minute
- for install all package 📁
- <strong style="color: #00ffcc; font-size: 18px;">Step 6:</strong> After install enter your
- number and get pairing code go to
- Whatsapp click 3 button and click
- linked device after again click
- Linked device enter code
- successfully connected bot ✅
- 
- <strong style="color: #00ffcc; font-size: 18px;">Help:</strong> Message my number 
- number 🖇️ - <a href="https://wa.me/+93780515089" target="_blank" style="color: #007bff; text-decoration: underline;">CLICK HERE</a>
-        </pre>
-        <button class="button back-button" onclick="showMain()">BACK 🔙</button>
-    </div>
-
-    <script>
-        function showReadme() {
-            document.getElementById('mainPage').style.display = 'none';
-            document.getElementById('readmePage').style.display = 'block';
-        }
-
-        function showMain() {
-            document.getElementById('readmePage').style.display = 'none';
-            document.getElementById('mainPage').style.display = 'block';
-        }
-    </script>
 </body>
 </html>
